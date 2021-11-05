@@ -20,7 +20,7 @@ Auth::routes();
 
 if(env('CONFIG', true)) {
     Route::get('/', function() {
-        return redirect('/db-config');
+        return redirect('/step-1');
     });
 } else {
     Route::get('/', function () {
@@ -31,11 +31,10 @@ if(env('CONFIG', true)) {
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 if(env('CONFIG', true)) {
+    Route::get('/step-1', [App\Http\Controllers\ConfigController::class, 'step1']);
     Route::get('/step-2', [App\Http\Controllers\ConfigController::class, 'step2']);
-    Route::get('/db-config', [App\Http\Controllers\ConfigController::class, 'indexDbConfig']);
     Route::match(['get', 'post'], '/config-db-check', [App\Http\Controllers\ConfigController::class, 'configDbCheck']);
-    // Route::match(['get', 'post'], '/config-db-next', [App\Http\Controllers\ConfigController::class, 'configDbNext']);
-    Route::get('/finish-config', [App\Http\Controllers\ConfigController::class, 'indexFinishConfig']);
+    Route::get('/step-3', [App\Http\Controllers\ConfigController::class, 'step3']);
     Route::match(['get', 'post'], '/config-finish', [App\Http\Controllers\ConfigController::class, 'configFinish']);
 }
 

@@ -48,7 +48,7 @@
             @endif
 
             <div class="d-flex justify-content-center align-items-center" style="height: 90vh">
-                <div class="display-1">E-commerce Website</div>
+                <div class="display-1 text-primary">E-commerce Website</div>
             </div>
             <a class="config" href="{{ url('/config-btn') }}">Config</a>
         </div>

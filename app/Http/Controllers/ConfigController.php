@@ -9,17 +9,17 @@ use msztorc\LaravelEnv\Env;
 
 class ConfigController extends Controller
 {
-    public function step2() {
-        return view('config.step2');
+    public function step1() {
+        return view('config.step1');
     }
     
-    public function indexDbConfig() {
+    public function step2() {
         Artisan::call('config:clear');
-        return view('config.db_config');
+        return view('config.step2');
     }
 
-    public function indexFinishConfig() {
-        return view('config.finish_config');
+    public function step3() {
+        return view('config.step3');
     }
     
     public function configDbCheck(Request $request) {
@@ -29,13 +29,13 @@ class ConfigController extends Controller
         $password_query = "SELECT password FROM mysql.user WHERE user=? and password=?";
         
         if (!DB::select($db_query, [$request->db_name])) {
-            return redirect('/db-config')->with('error', 'Please, provide a correct information.');
+            return redirect('/step-2')->with('error', 'Please, provide a correct information.');
         } elseif(!DB::select($user_query, [$request->db_user])) {
-            return redirect('/db-config')->with('error', 'user not found!');
+            return redirect('/step-2')->with('error', 'user not found!');
         } elseif(!DB::select($host_query, [$request->db_user, $request->db_host])) {
-            return redirect('/db-config')->with('error', 'host not found!');
+            return redirect('/step-2')->with('error', 'host not found!');
         } elseif(!DB::select($password_query, [$request->db_user, $request->db_password]) && !empty($request->db_password)) {
-            return redirect('/db-config')->with('error', 'password didn\'t match!');
+            return redirect('/step-2')->with('error', 'password didn\'t match!');
         } else {
             $env = new ENV();
             $env->setValue('DB_DATABASE', $request->db_name);
@@ -43,7 +43,7 @@ class ConfigController extends Controller
             $env->setValue('DB_USERNAME', $request->db_user);
             $env->setValue('DB_PASSWORD', $request->db_password ?: "");
             Artisan::call('config:clear');
-            return redirect('/finish-config');
+            return redirect('/step-3');
         }
     }
 

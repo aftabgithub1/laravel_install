@@ -1,0 +1,23 @@
+@extends('layouts.config')
+
+@section('page_title')
+Step 1/4
+@endsection
+
+@section('content')
+<div class="row justify-content-center">
+    <div class="col-lg-5">
+        <h1 class="my-4">Step 1/3</h1>
+        <h2>Privacy Policy</h2>
+        <div class="mb-4" style="border: 1px solid gray; padding: 10px; height: 400px; overflow: auto">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo dignissimos tempore voluptates dicta, porro corporis modi natus adipisci quia cupiditate voluptate officiis accusamus dolores non rerum debitis aspernatur esse quibusdam at itaque praesentium! Numquam sint consectetur minima consequuntur ipsa. Fugit temporibus ab exercitationem nostrum quis velit, nemo aperiam explicabo sequi doloribus modi eveniet mollitia libero beatae quam debitis, ipsa dolore repellat iure quo, accusantium perferendis qui sint. Facere similique odio accusamus ipsum quisquam maiores quam, ipsa maxime nesciunt neque adipisci. Dignissimos eveniet vel eaque commodi quam adipisci officia sapiente laborum laudantium ex officiis, at id, labore voluptas itaque ducimus quod?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi molestiae ut nam suscipit molestias ab dolor consequuntur vel aspernatur. Atque unde eius aliquam enim officiis facere hic ut rerum eaque, doloribus cum? Repellat, molestias quia laborum dolore, magni architecto, dignissimos reiciendis dolorem quae inventore excepturi doloribus. Optio est obcaecati quidem!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium labore unde in obcaecati minus ut atque voluptas omnis iure. Odit ex voluptas ea facilis veritatis tempore possimus enim ut soluta provident! Optio corporis vitae aspernatur facilis. Consectetur fugit necessitatibus quis praesentium reiciendis dolores inventore mollitia sunt nisi et amet omnis nobis, laudantium aut rerum ratione. Quisquam maxime cumque deserunt libero at eligendi voluptatibus rerum ipsam eaque earum vel debitis voluptate consequuntur architecto, assumenda consectetur dolor atque facere vitae excepturi quidem voluptatum itaque sequi ad! Eveniet animi voluptatum odio, assumenda ipsum sunt nesciunt. Dolorum, iste natus facilis eveniet similique vitae ea labore voluptas, dignissimos numquam harum at temporibus nam iure, facere provident minus. Asperiores harum vitae tempora, minus voluptas laboriosam, aspernatur laudantium deserunt quibusdam nemo magnam inventore cupiditate optio eos. Adipisci nostrum eius repellat quae aperiam officiis libero? Fugit minus nostrum eaque corrupti neque facilis? Eos corporis veritatis consectetur sint accusantium? Perferendis rerum alias hic iusto aliquid tenetur adipisci! Facere, neque maiores qui, corrupti minima sapiente vel cumque officiis mollitia quam culpa error quos possimus autem soluta quia praesentium, ipsum aliquam itaque vitae laboriosam cupiditate nostrum? Iusto, amet ad accusantium perspiciatis, quibusdam similique maiores corrupti iste dignissimos laborum voluptas quisquam praesentium.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, ad. Dicta amet, reiciendis ad, expedita saepe dolor qui facilis alias odit nam explicabo dolorum nobis fugiat maxime provident. Beatae accusamus quaerat tempora sed vitae sunt, veritatis velit! Corrupti modi perferendis laboriosam maiores impedit cupiditate neque at doloribus eveniet! Ullam modi laudantium accusantium, sequi exercitationem consectetur voluptatem quasi nostrum consequuntur autem maiores esse doloremque. Assumenda aspernatur officiis voluptate mollitia dolore reprehenderit corporis rerum minima provident distinctio expedita, harum asperiores sequi voluptas tenetur quos? A incidunt possimus earum vitae perspiciatis hic dicta animi. Aspernatur mollitia eligendi rerum? Blanditiis quo fugiat architecto eum omnis culpa provident maxime cupiditate porro, quos exercitationem itaque odio sunt corrupti? Molestiae sequi nam officiis. Veritatis recusandae cumque placeat reprehenderit tempora laborum nobis ut eos exercitationem eaque ipsum animi sint ab atque, expedita quaerat, in assumenda amet optio. Nobis tempore odit quae! Magnam temporibus nisi quam molestiae, assumenda praesentium.</p>
+        </div>
+        <div class="text-center">
+            <a href="{{url('/step-2')}}" class="btn btn-primary">Agree</a>
+        </div>
+    </div>
+</div>
+@endsection        

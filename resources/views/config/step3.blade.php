@@ -5,9 +5,9 @@ Step 2/2
 @endsection
 
 @section('content')
-<div class="row justify-content-center mt-5">
+<div class="row justify-content-center">
     <div class="col-lg-5">
-        <h1 class="mb-5">Step 2/2</h1>
+        <h1 class="my-4">Step 3/3</h1>
         <h2>Configuration Complete!</h2>
         <h4>Database Name: {{ env('DB_DATABASE') }}</h4>
         <form action="{{ url('config-finish') }}">
